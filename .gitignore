@@ -1,0 +1,5 @@
+# TOTALLY IGNORE THE MODEL FILES
+.ipynb_checkpoints
+*.h5
+*.h5py
+*.npy
