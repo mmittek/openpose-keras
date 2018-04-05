@@ -9,10 +9,11 @@ Coming soon
 Coming soon
 
 ## Hand keypoint estimation network
-Model weights converted from Caffe model definition available for download: https://drive.google.com/file/d/1yPQFrCrDltqzYAnWBl__O7oZxGL0sQlu/view
-
 [![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/FnoI8ufwhbs/0.jpg)](https://www.youtube.com/watch?v=FnoI8ufwhbs)      
 Please check out the demo on yt: https://www.youtube.com/watch?v=FnoI8ufwhbs
+
+Model weights converted from Caffe model definition available for download: https://drive.google.com/file/d/1yPQFrCrDltqzYAnWBl__O7oZxGL0sQlu/view
+
 
 
 
