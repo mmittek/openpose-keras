@@ -1,12 +1,19 @@
 # OpenPose-Keras
-A little bit of play with OpenPose without using their API but allowing to build / prototype post-processing steps in keras
+A little bit of play with OpenPose without using their API but allowing to build / prototype pre and post-processing steps in Keras
 
-[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/FnoI8ufwhbs/0.jpg)](https://www.youtube.com/watch?v=FnoI8ufwhbs)
 
+## Body keypoint estimation network
+Coming soon
+
+## Face keypoint estimation network
+Coming soon
+
+## Hand keypoint estimation network
+Model weights converted from Caffe model definition available for download: https://drive.google.com/file/d/1yPQFrCrDltqzYAnWBl__O7oZxGL0sQlu/view
+
+[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/FnoI8ufwhbs/0.jpg)](https://www.youtube.com/watch?v=FnoI8ufwhbs)      
 Please check out the demo on yt: https://www.youtube.com/watch?v=FnoI8ufwhbs
 
-## Model weights available for download:
-1. OpenPose's "hand" network extracted from Caffe: https://drive.google.com/file/d/1yPQFrCrDltqzYAnWBl__O7oZxGL0sQlu/view?usp=sharing
 
 
 ## External resources:
