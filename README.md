@@ -18,7 +18,8 @@ Please check out the demo on yt: https://www.youtube.com/watch?v=FnoI8ufwhbs
 
   
 ### Model description <a name="handKeypointEstimationNetwork_modelDescription" />   
-Original model can be found on the [OpenPose's github](https://github.com/CMU-Perceptual-Computing-Lab/openpose). The readme on the main page says that the "hand keypoint detection" 2x21 keypoint estimation. The network itself outputs 22 channels (21 keypoints + background). The final layer feeds from the 128-deep convolutional layer (Mconv6_stage6). It is defined as follows (as defined in the [models/hand/pose_deploy.prototxt](https://github.com/CMU-Perceptual-Computing-Lab/openpose/blob/master/models/hand/pose_deploy.prototxt)):
+Original model can be found on the [OpenPose's github](https://github.com/CMU-Perceptual-Computing-Lab/openpose). Model weights converted from Caffe model definition available for download: https://drive.google.com/file/d/1yPQFrCrDltqzYAnWBl__O7oZxGL0sQlu/view
+The readme on the main page says that the "hand keypoint detection" 2x21 keypoint estimation. The network itself outputs 22 channels (21 keypoints + background). The final layer feeds from the 128-deep convolutional layer (Mconv6_stage6). It is defined as follows (as defined in the [models/hand/pose_deploy.prototxt](https://github.com/CMU-Perceptual-Computing-Lab/openpose/blob/master/models/hand/pose_deploy.prototxt)):
 ```
 layer {
   name: "Mconv7_stage6"
@@ -62,7 +63,6 @@ I haven't studied the code of the OpenPose library very well (yet!) but I notice
 ### Discovered issues  <a name="handKeypointEstimationNetwork_issues" />
 - It seems like the model does not capture hand keypoints when exposed to images of people wearing gloves. I haven't figured out how exaclty the network was trained, but I can imagine that there was no emphasis on glove-wearing targets.
 
-Model weights converted from Caffe model definition available for download: https://drive.google.com/file/d/1yPQFrCrDltqzYAnWBl__O7oZxGL0sQlu/view
 
 
 # External resources  <a name="externalResources" />
