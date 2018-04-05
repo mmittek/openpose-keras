@@ -5,10 +5,10 @@ Table of contents:
 - Body keypoint estimation network (coming soon)
 - Face keypoint estimation network (coming soon)
 - [Hand keypoint estimation network](#handKeypointEstimationNetwork)
-   * [Model description](handKeypointEstimationNetwork_modelDescription)
-   * [Input format and pre-processing](handKeypointEstimationNetwork_inputFormatAndPreProcessing)
-   * [Post-processing](handKeypointEstimationNetwork_postProcessing)
-   * [Discovered issues](handKeypointEstimationNetwork_issues)
+   * [Model description](#handKeypointEstimationNetwork_modelDescription)
+   * [Input format and pre-processing](#handKeypointEstimationNetwork_inputFormatAndPreProcessing)
+   * [Post-processing](#handKeypointEstimationNetwork_postProcessing)
+   * [Discovered issues](#handKeypointEstimationNetwork_issues)
 - [External resources](#externalResources)
 
 
