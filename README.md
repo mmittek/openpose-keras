@@ -11,12 +11,13 @@ Table of contents:
    * [Discovered issues](#handKeypointEstimationNetwork_issues)
 - [External resources](#externalResources)
 
-
-## Hand keypoint estimation network <a name="handKeypointEstimationNetwork" />
+<a name="handKeypointEstimationNetwork" />
+## Hand keypoint estimation network 
 [![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/FnoI8ufwhbs/0.jpg)](https://www.youtube.com/watch?v=FnoI8ufwhbs)      
 Please check out the demo on yt: https://www.youtube.com/watch?v=FnoI8ufwhbs
 
-### Model description <a name="handKeypointEstimationNetwork_modelDescription" />
+<a name="handKeypointEstimationNetwork_modelDescription" />
+### Model description 
 Original model can be found on the [OpenPose's github](https://github.com/CMU-Perceptual-Computing-Lab/openpose). The readme on the main page says that the "hand keypoint detection" 2x21 keypoint estimation. The network itself outputs 22 channels (21 keypoints + background). The final layer feeds from the 128-deep convolutional layer (Mconv6_stage6). It is defined as follows (as defined in the [models/hand/pose_deploy.prototxt](https://github.com/CMU-Perceptual-Computing-Lab/openpose/blob/master/models/hand/pose_deploy.prototxt)):
 ```
 layer {
@@ -50,19 +51,22 @@ layer {
 Keep in mind that this particular network does NOT produce any part affinity fields, just finger-keypoints. OpenPose's documentation contains the following picture describing the keypoint channel ids:    
 <a href="https://github.com/CMU-Perceptual-Computing-Lab/openpose/blob/master/doc/output.md#face-and-hands"><img src="https://raw.githubusercontent.com/CMU-Perceptual-Computing-Lab/openpose/master/doc/media/keypoints_hand.png" width="300" /></a>
 
-### Input format and pre-processing <a name="handKeypointEstimationNetwork_inputFormatAndPreProcessing" />
+<a name="handKeypointEstimationNetwork_inputFormatAndPreProcessing" />
+### Input format and pre-processing
 I believe that the natural resolution of the input images (e.g. the standard network input size) is 368 on the width and whatever turns out to be on the height. From the papers presenting this method one figure out that the authors use multi-scale inputs. Basically they go through different scales from 0.5 to 1.5 and average the heatmaps. Network accepts 3 channel RGB images with 32-bit floating point values scaled between -0.5 <= x <= 0.5. 
 
-
-### Post-processing <a name="handKeypointEstimationNetwork_postProcessing" />
+<a name="handKeypointEstimationNetwork_postProcessing" />
+### Post-processing 
 I haven't studied the code of the OpenPose library very well (yet!) but I noticed that the returned heatmaps seem to have bi-modal distributions. E.g. some values of detections are strongly negative and some are strongly positive. I understood that it may be their way of distinguishing the left hand from the right one. I still need to investigate that.   
 
-### Discovered issues <a name="handKeypointEstimationNetwork_issues" />
+<a name="handKeypointEstimationNetwork_issues" />
+### Discovered issues 
 - It seems like the model does not capture hand keypoints when exposed to images of people wearing gloves. I haven't figured out how exaclty the network was trained, but I can imagine that there was no emphasis on glove-wearing targets.
 
 Model weights converted from Caffe model definition available for download: https://drive.google.com/file/d/1yPQFrCrDltqzYAnWBl__O7oZxGL0sQlu/view
 
-# External resources: <a name="externalResources" />
+<a name="externalResources" />
+# External resources: 
 1. OpenPose GitHub repo: https://github.com/CMU-Perceptual-Computing-Lab/openpose
 2. Origin of OpenPose: https://github.com/ZheC/Realtime_Multi-Person_Pose_Estimation
 3. Paper describing the method: https://arxiv.org/abs/1611.08050
